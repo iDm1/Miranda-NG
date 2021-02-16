@@ -194,13 +194,13 @@ var msg = {
             case 'file-in':
                 var file_save_path = shell.getDB('SRFile', 'RecvFilesDirAdv') || shell.DEFAULT_FILES_LOCATION;
                 if (file_save_path.length > 0) {
-                    var search_for;
                     file_save_path = shell.addBS(file_save_path);
                     /* Try to find %userid% or %nick% in recent locations */
+                    var search_for;
                     if (/%userid%/i.test(file_save_path)) {
                         search_for = message.getAttribute('data-uin');
                     } else if (/%nick%/i.test(file_save_path)) {
-                        search_for = message.getAttribute('data-nick');
+                        search_for = message.getAttribute('data-name');
                     }
                     if (search_for && search_for.length > 0) {
                         for (var i = 0; i < 5; i++) {
@@ -209,12 +209,12 @@ var msg = {
                             file_path = null;
                         }
                     }
-                    /* -------------------------------------------------- */
                     search_for = null;
+                    /* -------------------------------------------------- */
                     if (!file_path) file_path = file_save_path.replace(
                         /%userid%/gi, message.getAttribute('data-uin')
                     ).replace(
-                        /%nick%/gi, message.getAttribute('data-nick')
+                        /%nick%/gi, message.getAttribute('data-name')
                     );
                     if (file_path && file_path.length > 0) file_path = file_path + message_text;
                 }
