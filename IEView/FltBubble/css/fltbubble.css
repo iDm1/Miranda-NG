@@ -1,7 +1,4 @@
-/* fltbubble */
-
-
-/* 2021 Dmitry Chigiryov (Dm1) */
+/* FltBubble / 2021 Dmitry Chigiryov (Dm1) */
 
 body {
     font-size: 16px;
@@ -40,7 +37,7 @@ img {
     z-index: 10000;
     font-size: 14px;
     text-align: right;
-    cursor:default;
+    cursor: default;
     background-color: #020202;
 }
 
