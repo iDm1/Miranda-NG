@@ -1,0 +1,288 @@
+<!--HTMLStart-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>FltBubble (Dm1) IEView Template</title>
+    <base href="%base%" />
+    <meta property="miranda:protocol" content="%proto%">
+    <meta property="miranda:uinin" content="%uinIn%">
+    <meta property="miranda:uinout" content="%uinOut%">
+    <meta property="miranda:avatarin" content="%avatarIn%">
+    <meta property="miranda:avatarout" content="%avatarOut%">
+    <link rel="stylesheet" href="css/fltbubble.css" />
+    <link id="theme-css" rel="stylesheet" href="css/fltbubble_dark.css" />
+    <!--[if IE]>
+	<style type="text/css">
+		.img-container img {
+			width: expression((maxw=this.parentNode.offsetWidth) > this.width ? 'auto' : maxw);
+		}
+	</style>
+	<![endif]-->
+    <script type="text/javascript">
+        var base_url = '%\base%';
+    </script>
+    <script type="text/javascript" src="js/fltbubble.js"></script>
+</head>
+
+<body>
+<div id="panel-top">
+    <button role="button" id="btn-increase" onclick="ui.changeScale(1)">+</button>
+    <button role="button" id="btn-decrease" onclick="ui.changeScale(-1)">-</button>
+    <button role="button" id="btn-theme" onclick="ui.toggleTheme()">T</button>
+</div>
+
+
+<!--MessageIn-->
+<table class="message message-in message-new">
+    <tr>
+        <td class="img-cell">&nbsp;</td>
+        <td>
+            <div class="message-body" data-name="%name%" data-uin="%uin%" data-type="message-in">%text%</div>
+            <div class="message-time">%time%</div>
+        </td>
+        <td class="avatar-cell"><img src="%avatar%" alt="%name%" title="%name% [%date%, %time%]" /></td>
+    </tr>
+</table>
+<script type="text/javascript">
+    msg.parse();
+    msg.show();
+</script>
+
+
+
+<!--MessageOut-->
+<table class="message message-out message-new">
+    <tr>
+        <td class="avatar-cell"><img src="%avatar%" alt="%name%" title="%name% [%date%, %time%]" /></td>
+        <td>
+            <div class="message-body" data-name="%name%" data-uin="%uin%" data-type="message-out">%text%</div>
+            <div class="message-time">%time%</div>
+        </td>
+        <td class="img-cell">&nbsp;</td>
+    </tr>
+</table>
+<script type="text/javascript">
+    msg.parse();
+    msg.show();
+</script>
+
+
+
+<!--hMessageIn-->
+<table class="message message-in">
+    <tr>
+        <td class="img-cell">&nbsp;</td>
+        <td>
+            <div class="message-body" data-name="%name%" data-uin="%uin%" data-type="message-in">%text%</div>
+            <div class="message-time"><span class="message-date">%date%</span> %time%</div>
+        </td>
+        <td class="avatar-cell"><img src="%avatar%" alt="%name%" title="%name% [%date%, %time%]" /></td>
+    </tr>
+</table>
+<script type="text/javascript">
+    msg.parse();
+</script>
+
+
+
+<!--hMessageOut-->
+<table class="message message-out">
+    <tr>
+        <td class="avatar-cell"><img src="%avatar%" alt="%name%" title="%name% [%date%, %time%]" /></td>
+        <td>
+            <div class="message-body" data-name="%name%" data-uin="%uin%" data-type="message-out">%text%</div>
+            <div class="message-time">%time% <span class="message-date">%date%</span></div>
+        </td>
+        <td class="img-cell">&nbsp;</td>
+    </tr>
+</table>
+<script type="text/javascript">
+    msg.parse();
+</script>
+
+
+
+<!--FileIn-->
+<table class="message message-in message-new">
+    <tr>
+        <td class="img-cell">&nbsp;</td>
+        <td>
+            <div class="message-body" data-name="%name%" data-uin="%uin%" data-type="file-in">
+                <table>
+                    <tr>
+                        <td><a class="img-icon icon-file" title="%fileDesc%" href="#"></a></td>
+                        <td><a class="message-file" href="#">%text%</a></td>
+                        <td><a class="img-icon icon-folder" href="#"></a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="message-time">%time%</div>
+        </td>
+        <td class="avatar-cell"><img src="%avatar%" alt="%name%" title="%name% [%date%, %time%]" /></td>
+    </tr>
+</table>
+<script type="text/javascript">
+    msg.parse();
+    msg.show();
+</script>
+
+
+
+<!--FileOut-->
+<table class="message message-out message-new">
+    <tr>
+        <td class="avatar-cell"><img src="%avatar%" alt="%name%" title="%name% [%date%, %time%]" /></td>
+        <td>
+            <div class="message-body" data-name="%name%" data-uin="%uin%" data-type="file-out">
+                <table>
+                    <tr>
+                        <td><a class="img-icon icon-file" title="%fileDesc%" href="#"></a></td>
+                        <td><a class="message-file" href="#">%text%</a></td>
+                        <td><a class="img-icon icon-folder" href="#"></a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="message-time">%time%</div>
+        </td>
+        <td class="img-cell">&nbsp;</td>
+    </tr>
+</table>
+<script type="text/javascript">
+    msg.parse();
+    msg.show();
+</script>
+
+
+
+<!--hFileIn-->
+<table class="message message-in">
+    <tr>
+        <td class="img-cell">&nbsp;</td>
+        <td>
+            <div class="message-body" data-name="%name%" data-uin="%uin%" data-type="file-in">
+                <table>
+                    <tr>
+                        <td><a class="img-icon icon-file" title="%fileDesc%" href="#"></a></td>
+                        <td><a class="message-file" href="#">%text%</a></td>
+                        <td><a class="img-icon icon-folder" href="#"></a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="message-time">%time% <span class="message-date">%date%</span></div>
+        </td>
+        <td class="avatar-cell"><img src="%avatar%" alt="%name%" title="%name% [%date%, %time%]" /></td>
+    </tr>
+</table>
+<script type="text/javascript">
+    msg.parse();
+</script>
+
+
+
+<!--hFileOut-->
+<table class="message message-out">
+    <tr>
+        <td class="avatar-cell"><img src="%avatar%" alt="%name%" title="%name% [%date%, %time%]" /></td>
+        <td>
+            <div class="message-body" data-name="%name%" data-uin="%uin%" data-type="file-out">
+                <table>
+                    <tr>
+                        <td><a class="img-icon icon-file" title="%fileDesc%" href="#"></a></td>
+                        <td><a class="message-file" href="#">%text%</a></td>
+                        <td><a class="img-icon icon-folder" href="#"></a></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="message-time">%time% <span class="message-date">%date%</span></div>
+        </td>
+        <td class="img-cell">&nbsp;</td>
+    </tr>
+</table>
+<script type="text/javascript">
+    msg.parse();
+</script>
+
+
+
+<!--URL-->
+<table class="message message-in message-new">
+    <tr>
+        <td class="img-cell">&nbsp;</td>
+        <td>
+            <div class="message-body" data-name="%name%" data-uin="%uin%" data-type="url">
+                <table>
+                    <tr>
+                        <td><div class="img-icon icon-link" ></div></td>
+                        <td class="message-url">%text%</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="message-time">%time%</div>
+        </td>
+        <td class="avatar-cell"><img src="%avatar%" alt="%name%" title="%name% [%date%, %time%]" /></td>
+    </tr>
+</table>
+<script type="text/javascript">
+    msg.show();
+</script>
+
+
+
+<!--hURL-->
+<table class="message message-in">
+    <tr>
+        <td class="img-cell">&nbsp;</td>
+        <td>
+            <div class="message-body" data-name="%name%" data-uin="%uin%" data-type="url">
+                <table>
+                    <tr>
+                        <td><div class="img-icon icon-link" ></div></td>
+                        <td class="message-url">%text%</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="message-time">%time% <span class="message-date">%date%</span></div>
+        </td>
+        <td class="avatar-cell"><img src="%avatar%" alt="%name%" title="%name% [%date%, %time%]" /></td>
+    </tr>
+</table>
+
+
+
+<!--Status-->
+<table class="message message-status message-new">
+    <tr>
+        <td>&nbsp;</td>
+        <td>
+            <div class="message-body" data-name="%name%" data-uin="%uin%" data-type="status">%text%</div>
+            <div class="message-time">%time%</div>
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+<script type="text/javascript">
+    msg.show();
+</script>
+
+
+
+<!--hStatus-->
+<table class="message message-status">
+    <tr>
+        <td>&nbsp;</td>
+        <td>
+            <div class="message-body" data-name="%name%" data-uin="%uin%" data-type="status">%text%</div>
+            <div class="message-time">%time% <span class="message-date">%date%</span></div>
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+</table>
+
+
+
+</body>
+
+</html>

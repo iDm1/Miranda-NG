@@ -1,0 +1,224 @@
+/* fltbubble */
+
+
+/* 2021 Dmitry Chigiryov (Dm1) */
+
+body {
+    font-size: 16px;
+    margin: 0.36em;
+    color: #020202;
+    background: #ffffff url('../img/back.png') fixed;
+    font-family: Calibri;
+}
+
+a:link,
+a:active,
+a:visited {
+    color: #dcf8fd;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #8beeff;
+    text-decoration: underline;
+}
+
+img {
+    width: inherit;
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: nearest-neighbor;
+    border: none;
+}
+
+#panel-top {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 2px;
+    z-index: 10000;
+    font-size: 14px;
+    text-align: right;
+    cursor:default;
+    background-color: #020202;
+}
+
+#panel-top button {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin: 2px;
+    padding: 2px;
+    font-size: 1em;
+    line-height: 10px;
+    color: #888888;
+    cursor: pointer;
+    border: 1px solid #888888;
+    background-color: #020202;
+}
+
+#panel-top #btn-increase,
+#panel-top #btn-decrease {
+    display: none;
+}
+
+#panel-top:hover #btn-increase,
+#panel-top:hover #btn-decrease,
+#panel-top:hover #btn-theme {
+    display: inline-block;
+}
+
+.img-cell,
+.avatar-cell {
+    width: 2em;
+    vertical-align: top;
+}
+
+.avatar-cell img {
+    -ms-interpolation-mode: bicubic;
+}
+
+.img-icon {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+}
+
+.icon-file {
+    background: center no-repeat url('../img/filew.png');
+}
+
+.icon-folder {
+    background: center no-repeat url('../img/folderw.png');
+}
+
+.icon-link {
+    background: center no-repeat url('../img/filed.png');
+}
+
+.message {
+    overflow: hidden;
+}
+
+.message-new {
+    display: none;
+}
+
+.message-in,
+.message-out,
+.message-status {
+    width: 100%;
+    margin: 0.357em 0;
+    padding: 0;
+    table-layout: fixed;
+    border: none;
+}
+
+.message-status {
+    text-align: center;
+}
+
+.message-in td,
+.message-out td,
+.message-status td {
+    overflow: hidden;
+}
+
+.message-in {
+    text-align: right;
+}
+
+.message-out {
+    text-align: left;
+}
+
+.message-body {
+    display: inline-block;
+    position: relative;
+    width: inherit;
+    padding: 0.714em;
+    max-width: 100%;
+    min-width: 7.143em;
+    height: auto;
+    color: #ffffff;
+    vertical-align: middle;
+    text-align: left;
+    word-wrap: break-word;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    clear: both;
+    background: #808080;
+    box-shadow: 0 0.071em 0.429em 0 rgba(0, 0, 0, 0.4);
+}
+
+.message-body .message-file,
+.message-body .message-url {
+    color: #ffffff;
+}
+
+.message-time {
+    padding: 0.071em;
+    font-size: 0.714em;
+    color: #020202;
+}
+
+.message-date {
+    padding: 0 0.51em;
+    color: #808080;
+}
+
+.message-body a {
+    display: inline-block;
+    word-break: break-all;
+}
+
+.message-body .img-container {
+    display: block;
+    width: 100%;
+}
+
+.message-out .message-body {
+    margin-left: 1.429em;
+    background: #2baf2b;
+}
+
+.message-out .message-time {
+    margin-left: 2.02em;
+}
+
+.message-in .message-body {
+    margin-right: 1.429em;
+    background: #0086bf;
+}
+
+.message-in .message-time {
+    margin-right: 2.02em;
+}
+
+.message-out .message-body:after,
+.message-in .message-body:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50;
+    bottom: auto;
+    width: 0;
+    content: "";
+    border-style: solid;
+    border-width: 1.429em 0 0 1.429em;
+    border-color: #808080 transparent;
+}
+
+.message-out .message-body:after {
+    left: -1.429em;
+    border-width: 1.071em 1.429em 0 0;
+    border-color: transparent #2baf2b;
+}
+
+.message-in .message-body:after {
+    right: -1.429em;
+    left: auto;
+    border-width: 1.071em 0 0 1.429em;
+    border-color: transparent #0086bf;
+}

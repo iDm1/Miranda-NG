@@ -1,0 +1,58 @@
+/* fltbubble */
+
+
+/* 2021 Dmitry Chigiryov (Dm1) */
+
+body {
+    color: #020202;
+    background-color: #ffffff;
+}
+
+a:link,
+a:active,
+a:visited {
+    color: #dcf8fd;
+}
+
+a:hover {
+    color: #8beeff;
+}
+
+#panel-top,
+#panel-top button {
+    background-color: #eeeeee;
+}
+
+.message-body {
+    background-color: #808080;
+}
+
+.message-date {
+    color: #808080;
+}
+
+.message-time {
+    color: #020202;
+}
+
+.message-body,
+.message-body .message-file,
+.message-body .message-url {
+    color: #ffffff;
+}
+
+.message-out .message-body {
+    background-color: #2baf2b;
+}
+
+.message-out .message-body:after {
+    border-color: transparent #2baf2b;
+}
+
+.message-in .message-body {
+    background-color: #0086bf;
+}
+
+.message-in .message-body:after {
+    border-color: transparent #0086bf;
+}
