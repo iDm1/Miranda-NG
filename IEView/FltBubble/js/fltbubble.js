@@ -176,7 +176,6 @@ var msg = {
                 msg.file(message);
                 break;
         }
-
         message = null;
     },
     image: function(message) {
