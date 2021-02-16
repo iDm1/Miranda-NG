@@ -202,7 +202,7 @@ var msg = {
                     } else if (/%nick%/i.test(file_save_path)) {
                         search_for = message.getAttribute('data-nick');
                     }
-                    if (search_for.length > 0) {
+                    if (search_for && search_for.length > 0) {
                         for (var i = 0; i < 5; i++) {
                             file_path = shell.getDB('SRFile', 'MruDir' + i);
                             if (file_path && file_path.indexOf(search_for) !== -1) break;
