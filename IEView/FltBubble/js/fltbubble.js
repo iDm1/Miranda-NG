@@ -1,5 +1,4 @@
-/* fltbubble */
-/* 2021 Dmitry Chigiryov (Dm1) */
+/* FltBubble / 2021 Dmitry Chigiryov (Dm1) */
 
 var shell = {
     SHELL_TOOL: 'tools/shellopen.cmd',
