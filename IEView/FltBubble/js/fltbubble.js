@@ -2,6 +2,7 @@
 
 var shell = {
     SHELL_TOOL: 'tools/shellopen.cmd',
+    DEFAULT_FILES_LOCATION: '%mydocuments%\\Принятые файлы\\%userid%',
     base_path: null,
 
     init: function() {
@@ -143,7 +144,6 @@ var ui = {
 };
 
 var msg = {
-    DEFAUL_FILES_LOCATION: '%mydocuments%\\Принятые файлы\\%userid%',
     _timeout_hadle: false,
 
     init: function() {
@@ -193,7 +193,7 @@ var msg = {
         var file_path;
         switch (message.getAttribute('data-type')) {
             case 'file-in':
-                var file_save_path = shell.getDB('SRFile', 'RecvFilesDirAdv') || msg.DEFAUL_FILES_LOCATION;
+                var file_save_path = shell.getDB('SRFile', 'RecvFilesDirAdv') || shell.DEFAULT_FILES_LOCATION;
                 if (file_save_path.length > 0) {
                     var search_for;
                     file_save_path = shell.addBS(file_save_path);
