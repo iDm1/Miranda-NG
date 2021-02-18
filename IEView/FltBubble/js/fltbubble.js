@@ -140,6 +140,11 @@ var ui = {
             }
         }
         ui.setTheme(ui.THEME_CSS_LIST[0]);
+    },
+    setLink: function(el, href, action) {
+        el.setAttribute('href', 'file:///' + href);
+        el.setAttribute('data-path', href);
+        el.onclick = action;
     }
 };
 
@@ -227,18 +232,10 @@ var msg = {
         }
         message_text = null;
         if (file_path) {
+            ui.setLink(file_link, file_path, shell.openFile);
             file_link.innerText = shell.getFilename(file_path);
-            file_link.setAttribute('href', 'file:///' + file_path);
-            file_link.setAttribute('data-path', file_path);
-            file_link.onclick = shell.openFile;
-            file_link = message.querySelector('.icon-file');
-            file_link.setAttribute('href', 'file:///' + file_path);
-            file_link.setAttribute('data-path', file_path);
-            file_link.onclick = shell.openFile;
-            file_link = message.querySelector('.icon-folder');
-            file_link.setAttribute('href', 'file:///' + file_path);
-            file_link.setAttribute('data-path', file_path);
-            file_link.onclick = shell.openDir;
+            ui.setLink(message.querySelector('.icon-file'), file_path, shell.openFile);
+            ui.setLink(message.querySelector('.icon-folder'), file_path, shell.openDir);
         }
         file_link = null;
         file_path = null;
