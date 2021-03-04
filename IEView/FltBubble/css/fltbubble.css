@@ -24,7 +24,7 @@ img {
     width: inherit;
     max-width: 100%;
     height: auto;
-    -ms-interpolation-mode: nearest-neighbor;
+    -ms-interpolation-mode: bicubic;
     border: none;
 }
 
