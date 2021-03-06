@@ -29,5 +29,5 @@ EXIT /B
 EXIT /B
 
 :expandVariable
-	FOR /F %%A IN ('ECHO %%%~1%%') DO CALL SET "%~1=%%A"
+	FOR /F "delims=" %%A IN ('ECHO %%%~1%%') DO CALL SET "%~1=%%A"
 EXIT /B
